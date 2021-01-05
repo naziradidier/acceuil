@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>addiion</title>
+</head>
+<body>
+	<form>
+		<div id="content">
+			<h3>calculer addition</h3>
+			<form>
+				<label>Nombre</label>
+				<input type="text" name="" id="nombre">
+				<label>addition</label>
+				<input type="text" name="" id="addition">
+				<button id="calculer">calculer</button>
+			</form><br>
+			<div id="text-resultat">Resultat:</div>
+		</div>
+	</form>
+	<script type="text/javascript">
+		var x = 3 + 4 - 8 / 12;
+		alert(x);
+		var button = document.getElementById("calculer");
+		button.onclick =  function (argument) {
+			var nombre = document.getElementById("nombre");
+			var addition = document.getElementById("addition");
+			var Resultat = parseInt(nombre.value) + parseInt(addition.value);
+			//alert(Resultat);
+			var text_result = document.getElementById("text-resultat");
+			text_result.innerHTML = parseInt(nombre.value) + " " + "addition" + " " + parseInt(addition.value) +" " + " " + "est" + " " + Resultat;
+			return false;
+		}
+	</script>
+</body>
+</html>

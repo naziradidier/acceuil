@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>resolution premier degré</title>
+</head>
+<body>
+	<form>
+		<div id="content">
+			<h3>resoudre l'equation du premier degré</h3>
+			<form>
+				<label>A</label>
+				<input type="number" name="" id="A">
+				<label>B</label>
+				<input type="number" name="" id="B">
+				<button id="resoudre">Resoudre</button>
+			</form><br>
+			<div id="text-resultat">solution:</div>
+		</div>
+	</form>
+	<script type="text/javascript">
+		var button = document.getElementById("resoudre");
+		button.onclick =  function (argument) {
+			var a = document.getElementById("A");
+			var b = document.getElementById("B");
+			if(a.value == "")
+			{
+				alert("Saisir a");
+				return false;
+			}
+			if( b.value == ""){
+				alert("Saisir b");
+				return false;
+			}
+			if (a!=0) {
+				var solution = parseInt(-b.value)/ parseInt(a.value);
+				//alert(solution);
+			}
+			var text_resultat = document.getElementById("text-resultat");
+			text_resultat.innerHTML = "la" + " "+ "solution" + " " + " " + "est" + " "+ solution;
+			return false;
+		}
+	</script>
+</body>
+</html>

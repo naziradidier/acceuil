@@ -1,0 +1,32 @@
+.bloc {
+	border: 2px solid red;
+	display: none;
+}
+.in-line {
+	border: 2px dotted green;
+	display: inline;
+}
+.block{
+	color: blue;
+}
+.premier{
+	font-weight: bold;
+}
+.premier:hover + .bloc{
+	display: block;
+}
+.menu li {
+	background-color: green;
+	display: inline;
+	padding: 30px;
+	font-size: 20px
+
+}
+.menu a {
+	color: white;
+	text-decoration: none;
+}
+.menu a:hover {
+
+		color: black;	
+}

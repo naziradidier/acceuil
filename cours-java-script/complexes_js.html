@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>complexe en java script</title>
+</head>
+<body>
+	<div>
+		<form>
+			<label>nombre reel</label>
+			<input type="text" name="" id="reel">
+			<label>nombre imaginaire</label>
+			<input type="text" name="" id="imaginaire">
+			<button id="calcul">calculer</button>
+		</form>
+		<div id="text-resultat">
+			resulat
+		</div>
+		<script type="text/javascript">
+			var buttons = document.getElementById("calcul");
+			buttons.onclick = function (argument) {
+				var a = document.getElementById("reel");
+				var b = document.getElementById("imaginaire");
+				var nombre_reel = parseInt(a.value);
+				var nombre_imaginaire = parseInt(b.value);
+
+				var argument = Math.atan(nombre_imaginaire/nombre_reel);
+				var modules = Math.sqrt( Math.pow(parseInt(nombre_reel),2) + Math.pow(parseInt(nombre_imaginaire), 2) );
+				//alert("argument: " + argument + ", modules: " + modules);
+				if (a.value == "") {
+					alert("saisir le nombre_reel");
+					return false;
+				}
+				if (b.value == "") {
+					alert("saisir le nombre imaginaire");
+					return false;
+				}
+				var resultat = document.getElementById("text-resultat");
+				resultat.innerHTML = "le"+ " "+ "module"+ " " + "est" +  " " + modules + "<br>"	+ "l"+ "'"+ "argument"+ " "+ " est"+" " +argument;
+				return false;
+			}
+			
+		</script>
+	</div>
+</body>
+</html>

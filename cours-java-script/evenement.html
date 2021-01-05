@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		.onmouseover {
+			height: 200px;
+			width: 300px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<button onclick="dire_bonjour()">the time is?</button>
+	<div id="demo"></div><br>
+	<div class="onmouseover" onmouseover="over() ">
+
+		
+	</div>
+	<!--evennement commun: onchange, onclick, onmouseover, onmouseout, onkeydown, onload -->
+
+
+	<script type="text/javascript">
+		function afficher_date(){
+			document.getElementById('demo').innerHTML =  Date();
+		}
+		function dire_bonjour(){
+			alert("Hello");
+		}
+		function over(){
+			alert("cuseur nandalo amin'ny div");
+		}
+	</script>
+</body>
+</html>

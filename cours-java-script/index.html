@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>introduction javascript</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="content">
+		<h3>calculer puissance</h3>
+		<form>
+			<label>Nombre</label>
+			<input type="text" name="" id="nombre">
+			<label>Puissance</label>
+			<input type="text" name="" id="puissance">
+			<button id="calculer">calculer</button>
+		</form><br>
+		<div id="text-resultat">Resultat:</div>
+	</div>
+	<!--<button onclick="alert('Vous avez cliqué')">lancer l'impression</button>-->
+	<script type="text/javascript">
+
+		/*var button = document.getElementById("calculer");
+		button.onclick = function (argument) {
+
+			var nombre = document.getElementById("nombre");
+			var puissance = document.getElementById("puissance");
+
+			alert(nombre.value);
+			alert(puissance.value);
+			var resultat = Math.pow(nombre.value,puissance.value);
+			//alert(resultat);
+			var text_result = document.getElementById("text-resultat");
+			text_result.innerHTML = nombre.value + " " + "puissance" + " " + puissance.value +" " + " " + "est" + " " + resultat;
+
+			return false;
+
+		}
+		*/
+
+
+		/*var div = document.getElementById("content"); 
+		div.innerHTML = "Hello"; 
+		div.style.color = "blue"; // changer coleur u texte*/
+
+		//document.write("lorem");
+
+		/*var x = 2;
+		var y = 3;
+		var z = x + y;
+		//alert("La vleur de z est: " + z + "!");
+		x += 12;
+		var age = 18;
+		var name = "Nazirah";
+		var first_name = "Didier";
+		//alert("mon nom es: " + name + " " + first_name + "!");
+		div.innerHTML = "mon nom est: " + name + " " + first_name + " " + age +" ans !";
+		alert (typeof(first_name));
+		var puissance = Math.pow(2,3);
+		alert(puissance);*/
+
+
+		var button = document.getElementById("calculer");
+		button.onclick = function(argument){
+			var nombre = document.getElementById("nombre");
+			var puissance = document.getElementById("puissance");
+			var resultat = Math.pow(nombre.value , puissance.value);
+			var text_result = document.getElementById("text-resultat");
+			text_result.innerHTML = nombre.value + " " + "puissance" + " " + puissance.value + " " +"est" +" " + resultat;
+			return false;
+		}
+		
+
+
+
+	</script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

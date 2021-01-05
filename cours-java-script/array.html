@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<div>
+		<label>fruits</label>
+		<input type="text" name="" id="fruit">
+		<button id="ajouter">ajouter</button>
+	</div>
+	<h3>MES FRUITS</h3>
+	<div id="demo">
+		
+	</div>
+	<script type="text/javascript">
+		var cars = ["Saab", "Volvo" , "BMM", 345];
+		cars[1] = "camion";//kara igny mimodifie izy
+		//alert(cars[1]);
+		//document.getElementById('demo').innerHTML = cars.length;
+		//alert(typeof(cars));
+		var fruits, text;
+		fruits = ["apple", "orange", "mangue", "ananas", "letchi", "pomme", "banane"];
+		//fruits.push("fruits");//ajouter quelques chose mampiasa "push"
+
+		afficher_liste();
+
+		var button = document.getElementById("ajouter");
+		button.onclick = function (argument) {
+
+			var race = document.getElementById("fruit");
+			fruits.push(race.value);
+
+			afficher_liste();
+			
+			return false;
+		}
+
+		function afficher_liste(){
+			text = '<ul>';
+
+			for (var i = 0; i < fruits.length; i++) {
+				text += '<li>';
+				text += j = i + 1 + " " + fruits[i].toUpperCase();
+				if (i<fruits.length - 1) {
+					text += ",";
+				}
+				text += '</li>';
+			}
+
+			text += '</ul>';
+
+			document.getElementById('demo').innerHTML = text;
+		}
+		
+	</script>
+</body>
+</html>

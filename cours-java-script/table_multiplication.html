@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>table de multiplication</title>
+</head>
+<body>
+	<form>
+		<div id="content">
+			<h3>Les tables de multiplication</h3>
+			<form>
+				<label>Nombre</label>
+				<input type="number" name="" id="table">
+				<button id="resoudre">ok</button>
+			</form><br>
+			<div id="resultat">Resultat:</div>
+		</div>
+	</form>
+	<script type="text/javascript">
+		var button = document.getElementById("resoudre");
+		button.onclick = function (argument) {
+			var nombre = document.getElementById("table");
+			var afficher = document.getElementById("resultat");
+			afficher.innerHTML = "";
+			for (i = 0 ; i <= 10 ; i++) {
+				var multiplication = nombre.value * i;
+				afficher.innerHTML = afficher.innerHTML + " <br>"  + nombre.value + " " + "*" + " " + i + " " + "=" + " " +multiplication;
+			}
+			return false;
+		}
+	</script>
+</body>
+</html>

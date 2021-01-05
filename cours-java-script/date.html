@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		//var d = new Date(2018, 11, 24, 10, 33, 30, 0);
+		/*document.write(d + '<br>');
+		document.write(d.toUTCString() + '<br>');
+		document.write(d.toDateString() + '<br>');
+		document.write(d.toISOString());*/
+		var mois = ["janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre","décembre"];
+		var jours = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
+
+		var d = new Date();
+		document.write(d + '<br>');
+		var year = d.getFullYear();
+		var mois = mois[d.getMonth()];
+		var date = d.getDate();
+		var jours = jours[d.getDay()-1];
+		var hours = d.getHours();
+		var minutes = d.getMinutes();
+		document.write(jours + " le " + date + " " +  mois + " " + year  + "," + " " + hours + "h" +minutes);
+	</script>
+</body>
+</html>

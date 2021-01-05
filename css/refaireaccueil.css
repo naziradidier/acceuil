@@ -1,0 +1,36 @@
+*{
+
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #1A1A1A;
+	color: #ddd;
+	font-family: arial, Sans-Serif;
+
+}
+.menu {
+	background-color: #ff4848;
+	padding: 0 200px;
+}
+.menu li{
+	display:inline-block;
+
+}
+.menu li a {
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding: 20PX;
+
+}
+.menu li a:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+header {
+	padding: 200px;
+	padding-left: 100px;
+	background-image: url("../images/f3183e8023aedc912c7e9128f691f2ea_large.jpeg");
+	background-position: center center;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>animation</title>
+</head>
+<body>
+	<h2>compteur</h2>
+	<div>
+		<button id="commencer">start</button>
+		<button id="pause">pause</button>
+		<button id="stop">stop</button>
+	</div><br>
+	<div id="compter">00</div><br>
+	<div id="heure"></div>
+
+	<script type="text/javascript">
+		var bouton_commencer = document.getElementById('commencer');
+		var bouton_pause = document.getElementById('pause');
+		var bouton_stop = document.getElementById('stop');
+
+		
+		var i = 1;
+		var interval_id;
+
+		function compteur() {
+			var text = i;
+			if ( i<=9 ) {
+				text = '0' + i;
+			}
+
+			document.getElementById('compter').innerHTML = text;
+			i++;
+			interval_id = setTimeout(compteur, 1000);
+		}
+		
+
+		bouton_pause.onclick = function() {
+			clearTimeout(interval_id);
+		}
+
+		bouton_stop.onclick = function() {
+			clearTimeout(interval_id);
+			i = 0;
+			document.getElementById('compter').innerHTML = "00";
+		}
+		bouton_commencer.onclick = function() {
+			compteur();
+		}
+		
+		//setInterval(compteur, 1000);
+		
+
+
+	</script>
+</body>
+</html>

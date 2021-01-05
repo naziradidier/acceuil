@@ -1,0 +1,43 @@
+*{margin: 0; 
+padding: 0;
+box-sizing: border-box;}
+nav {
+	height: 80px;
+	background-color: red;
+}
+header {
+	height: 250px;
+	background-color: blue;
+}
+.main {
+	background-color: green;
+}
+.main .sidebar {
+	background-color: orange;
+	width: 25%;
+	max-height: 100%;
+
+}
+.main .content {
+	background-color: yellow;
+	width: 75%;
+}
+.main .sidebar, .main .content {
+	float: left;
+}
+.clear {
+	clear: both;
+}
+footer {
+	background-color: gray;
+}
+nav ul {
+	float: right;
+}
+nav ul li {
+	display: inline;
+	padding-right: 100px;
+}
+p::after {
+	content: "exemple zegny";
+}

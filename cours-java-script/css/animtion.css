@@ -1,0 +1,12 @@
+#zone {
+	background-color: #999;
+	width: 500px;
+	height: 300px;
+	position: relative;
+}
+#boule {
+	background-color: #000;
+	position: absolute;
+	border-radius: 50%;
+	border: 35px solid #000;
+}

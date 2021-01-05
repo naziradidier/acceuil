@@ -1,0 +1,288 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #1A1A1A;
+	font-family: Arial, Sans-Serif;
+	color: #ddd;
+}
+.menu {
+	background-color: #ff4848;
+
+}
+.menu li {
+	display: inline-block;
+}
+.menu li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 30px;
+	display: block;
+}
+.menu li a:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+header {
+	/*padding: 200px 0;*/
+	height: 400px;
+	background-image: url("../images/f3183e8023aedc912c7e9128f691f2ea_large.jpeg");
+	background-position: center center;
+}
+.conteneur {
+	width: 80%;
+	margin: auto;
+}
+img {
+	width: 100%;
+
+}
+.colonne {
+	width: 33%;
+	display: inline-block;
+}
+.section {
+	padding: 50px 0;
+}
+h3 {
+	color: #ff4848;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+p {
+	margin-bottom: 10px;
+}
+.colonne a {
+	text-decoration: none;
+	background-color: #ff4848;
+	text-align: center;
+	padding: .375rem .75rem;
+	color: white;
+	font-size: .9em;
+}
+.miova {
+	background-color: #222;
+}
+.grand {
+	width: 70%;
+	display: inline-block;
+	padding-right: 30px;
+
+}
+.petite {
+	width: 25%;
+	display: inline-block;
+}
+.miova {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.grand p {
+	text-align: justify;
+}
+footer {
+	padding: 20px 0;
+}
+footer p {
+	text-align: center;
+}
+header {
+	
+	position: relative;
+}
+
+.conteneur h1 {
+	
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: green;
+	z-index: 1;
+}
+.conteneur .text {
+	
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-color: blue;
+	z-index: 2;
+	width: 300px;
+	height: 100px;
+	overflow: auto;
+}
+.grand img {
+	width: 200px;
+	float:left;
+	margin-right: 10px;
+}
+.petite p {
+	text-align: justify;
+}
+.sous-menu {
+	position: relative;
+}
+.dropdown-content {
+	position: absolute;
+	z-index: 1;
+	width: 200px;
+	padding: 20px 0;
+	background-color: gray;
+	display: none;
+}	
+.sous-menu:hover .dropdown-content {
+	display: block;
+}
+.dessus {
+	position: relative;
+}
+.dessous {
+	position: absolute;
+	z-index: 1;
+	width: 200px;
+	padding: 10px;
+	background-color: blue;
+	display: none;
+
+}
+.dessus:hover .dessous {
+	display: block;
+}
+
+.section-galery {
+	background-color: gray;
+	padding: 30px;
+}
+.clear{
+	clear: both;
+}
+.section-galery .col {
+	width: 25%;
+	/*display: inline-block;*/
+	float: left;
+	padding-right: 5px;
+	
+}
+.section-galery .galery{
+	border: 1px solid #ccc;
+}
+
+.section-galery .galery p {
+	text-align: center;
+}
+.section-galery .galery:hover {
+	background-color: rgba(255, 255, 255, .2);
+}
+
+
+/*formulaire section*/
+#form-section {
+	padding: 60px 0;
+}
+#form-section .conteur {
+		width: 80%;
+		margin: auto;
+
+}
+.form-row {
+	margin-bottom: 30px;
+	overflow: auto;
+}
+.form-row label {
+	float:left;
+	width: 20%;
+}
+.conteur h1 {
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.form-field {
+	width: 80%;
+	padding: 10px;
+	background-color: #555;
+	border: none;
+	color: white;
+}
+input[type=text]{
+	float: left;
+}
+input[type=text]:focus{
+	background-color:  #888;
+}
+
+textarea {
+	font-family: arial;
+}
+textarea:focus {
+	background-color:  #888; 
+}
+input[type=submit] {
+	text-align: center;
+	background-color: #ff4848;
+	border: none;
+	padding: 20px;
+	color: white;
+	float: right;
+	width: 150px;
+
+}
+input[type=submit]:hover {
+	background: blue;
+	color: red;
+	cursor: pointer;
+}
+@media only screen and (max-width: 768px) {
+	.colonne {
+		width: 100%;
+		padding-bottom: 10px;
+
+	}
+	.grand {
+		width: 100%;
+		padding-right: 0;
+
+	}
+	.grand img {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.petite img {
+		margin-bottom: 10px;
+	}
+	.petite {
+		width: 100%;
+
+	}
+	.section-galery .col {
+		width: 100%;
+		padding-bottom: 10px;
+	}
+	.conteneur li {
+		display: block;
+	}
+	.menu {
+		height: 100px;
+		width: 100%;
+		overflow: hidden;
+		position: absolute;
+		z-index: 100;
+	}
+	.menu:hover {
+		height: 100%;
+	}
+	input[type=submit] {
+		width: 100%;
+	}
+	.form-row label {
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.form-field {
+		width: 100%;
+	}
+
+
+
+}

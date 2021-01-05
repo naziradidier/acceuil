@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/animtion.css">
+</head>
+<body>
+	<button id="start">démarrer</button>
+	<button id="stop">arrêter</button> <br><br>
+
+	<div id="zone">
+		<div id="boule">
+		
+		</div>
+	</div>
+	<script type="text/javascript">
+		var zone = document.getElementById('zone');
+		var boule = document.getElementById('boule');
+
+		var boutton_demarrer = document.getElementById('start');
+		var boutton_stop = document.getElementById('stop');
+
+		var position_left = 0;
+		var position_top = 0;
+
+		var interval_id;
+
+		//var reculer_y = false;
+		var reculer_x = false;
+
+		function animation() {
+			boule.style.top = position_top + "px";
+			boule.style.left = position_left + "px";
+
+			if (position_left == boule.offsetParent.offsetWidth - boule.offsetWidth) {
+				reculer_x = true;
+			}
+			if (position_left == 0) {
+				reculer_x = false;
+			}
+			if (reculer_x === false) {
+				position_left ++;
+			}
+			else {
+				position_left--;
+			}
+
+
+			if (position_top == boule.offsetParent.offsetHeight - boule.offsetHeight) {
+				reculer_y = true;
+			}
+			if (position_top == 0) {
+				reculer_y = false;
+			}
+			if (reculer_y === false) {
+				position_top++;
+			} 
+			else {
+				position_top--;
+			}
+
+			console.log("Left: " + position_left);
+			console.log("Top: " + position_top);
+			interval_id = setTimeout(animation, 10);
+		}
+		boutton_demarrer.onclick = function() {
+			animation();
+		}
+		boutton_stop.onclick = function() {
+			clearTimeout(interval_id);
+			position_top = 0;
+			position_left = 0;
+			boule.style.top = position_top + 'px';
+			boule.style.left = position_left + 'px';
+
+		}
+
+	</script>
+</body>
+</html>
